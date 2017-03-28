@@ -26,3 +26,45 @@ Project was created and tested on the Raspberry Pi using Apache web server.
 
 #### 3.) Code should be well commented
 
+.
+.
+.
+
+## Schemas
+```
+Database changed
+mysql> DESCRIBE main;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| booktype | varchar(20)  | YES  |     | NULL    |                |
+| fillin1  | varchar(30)  | YES  |     | NULL    |                |
+| fillin2  | varchar(30)  | YES  |     | NULL    |                |
+| comments | varchar(200) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> DESCRIBE sport;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| entryid     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| id          | int(11)     | NO   |     | NULL    |                |
+| selectsport | varchar(30) | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> DESCRIBE activity;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| entryid        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| id             | int(11)     | NO   |     | NULL    |                |
+| selectactivity | varchar(30) | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> 
+
+```
