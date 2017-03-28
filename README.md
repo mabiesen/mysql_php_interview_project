@@ -1,5 +1,8 @@
 # mysql_php_interview_project
+
 Project created as a display of ability for an interview with a local company.
+
+Project was created and tested on the Raspberry Pi using Apache web server.
 
 ## Explicit project criteria is as follows:
 
@@ -22,3 +25,4 @@ Project created as a display of ability for an interview with a local company.
 #### 2.) Code should be DRY (Don't Repeat Yourself)
 
 #### 3.) Code should be well commented
+
