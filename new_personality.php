@@ -32,7 +32,7 @@
 			/* Generic database variables: servername, username, pw, db */
 			$servername = "localhost";
 			$username = "root";
-			$password = "inagotada";
+			$password = "XXXXXXX";
 			$dbname = "Questions";
 			
 			/* Make connection to DB and test connection */
