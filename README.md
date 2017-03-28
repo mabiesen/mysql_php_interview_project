@@ -8,7 +8,7 @@ Project was created and tested on the Raspberry Pi using Apache web server.
 
 #### 1.) Create a basic web form with 2 text boxes, 1 select box, two checkbox groups with four options a piece, and 1 text area box.
 
-#### 2.) Project criteria specify that frameworks CANNOT be used and appearance is not important.
+#### 2.) Project criteria specifies that frameworks CANNOT be used and appearance is NOT important.
 
 #### 3.) When the user submits the form, the form gets saved using PHP into a MySQL Database.
 
