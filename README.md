@@ -15,7 +15,7 @@ Explicit project criteria is as follows:
 .
 .
 
-Implicity project criteria is as follows:
+Implicit project criteria is as follows:
 
 1.) Code should be humanly readable
 
