@@ -42,7 +42,7 @@ Project was created and tested on the Raspberry Pi using Apache web server.
 
 5. Open index.php with your server of choice.
 
-6. Go ahead and fill out the form.  Upon submit you will be redirected to new_personality.php.  At that time you should be informed whether the script was successful.  As another check, you might use the command line to view table data directly.
+6. Go ahead and fill out the form.  Upon submit you will be redirected to new_personality.php.  At that time you should be able to find your entry in the list of entries provided: your entry will be in red font at the bottom of the list.  As another check of success, you might use the command line to view table data directly.
 
 .
 .
