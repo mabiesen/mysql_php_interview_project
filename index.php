@@ -2,7 +2,7 @@
 
 <html>
 	<!-- The form below is sent to new_personality.php -->
-	<!-- From there, the data is sent to three different databases -->
+	<!-- From there, the data is sent to three different tables -->
 	
 	<!-- Schemas are as follows:-->
 	<!-- main (id(INT AUTO_INCREMENT),booktype, fillin1, fillin2, comments) -->
