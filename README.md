@@ -1,4 +1,4 @@
-# mysql/php interview project
+# MySQL/PHP Interview Project
 
 Project created as a display of ability for an interview with a local company.
 
