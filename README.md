@@ -32,7 +32,7 @@ Project was created and tested on the Raspberry Pi using Apache web server.
 
 ## Directions for use
 
-1. Download and configure PHP, MySQL, and a webs server of your choosing.  This script was tested using Apache.
+1. Download and configure PHP, MySQL, and a web server of your choosing.  This script was tested using Apache.
 
 2. Create a database called "Questions" with three tables: main, sport, and activity. Reference the schemas below for additional information on what fields these tables should contain.
 
