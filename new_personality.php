@@ -1,7 +1,18 @@
+<!DOCTYPE html>
+
 <html>
+	<head>
+		<style type="text/css">
+			.red {
+				color: red;
+			}
+		</style>
+	</head>
 	<body>
 		
 		<!-- Purpose of this page is to provide confirmation of data input -->
+		<!-- Data that was input on the previous page is sent to the database -->
+		<!-- The database is then queried to insure that the entry was logged -->
 		<?php
 		
 		mainContainer();
@@ -32,15 +43,13 @@
 			/* Generic database variables: servername, username, pw, db */
 			$servername = "localhost";
 			$username = "root";
-			$password = "XXXXXXX";
+			$password = "inagotada";
 			$dbname = "Questions";
 			
 			/* Make connection to DB and test connection */
 			$conn = new mysqli($servername, $username, $password, $dbname);
 			if (mysqli_connect_errno()){
 				echo "Connection failed";
-			} else {
-				echo "Successfully connected to database";
 			}
 			
 			/* Main Table SQL */
@@ -55,15 +64,10 @@
 			generateDynamic($conn, $last_id, $activity, $activitytable, $activityfield);
 			
 			/* Provide summary back to user */
-			echo "<p>If there are no error messages above, your entry was successful! The contents of your entry are found below</p>";
-			echo "<p><b>Sports on TV:</b></p>";
-			echoResult($sport);
-			echo "<p><b>Activities in Last Year:</b></p>";
-			echoResult($activity);
-			echo "<p><b>You love: </b> $fillin1</p>";
-			echo "<p><b>You hate: </b> $fillin2</p>";
-			echo "<p><b>When asked to describe yourself, you said:</b></p>";
-			echo "<p>$comments</p>";
+			echo "<p>Your entry will be in red font in the list below.  If you can find it, you know your entry was successful!</p>";
+			
+			/* Now we are going to query the database and produce ALL results */
+			queryMain($last_id, $conn, $sportfield, $activityfield, $sporttable, $activitytable);
 			
 		}		
 
@@ -104,6 +108,41 @@
 				echo "<p>$ctr : $entry</p>";
 				$ctr += 1;
 			}
+		}
+		
+		/* Function to Query database and post full results */
+		function queryMain($last_id, $conn, $sportfield, $activityfield, $sporttable, $activitytable){
+			$mainquery = "SELECT * FROM main";
+			$result = $conn->query($mainquery);
+			
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()){
+					if ($row["id"] == $last_id){
+						echo "<div class='red'>";
+						echo "<p>id: " . $row["id"] . " - Booktype: " . $row["booktype"] . " - Loves: " . $row["fillin1"] . " - Hates: " . $row["fillin2"] . " - Comments: " . $row["comments"] . "</p>";
+						queryOther($conn, $row["id"], $sporttable, $sportfield);
+						queryOther($conn, $row["id"], $activitytable, $activityfield);
+						echo "</div>";						
+					} else {
+						echo "<p>id: " . $row["id"] . " - Booktype: " . $row["booktype"] . " - Loves: " . $row["fillin1"] . " - Hates: " . $row["fillin2"] . " - Comments: " . $row["comments"] . "</p>";
+						queryOther($conn, $row["id"], $sporttable, $sportfield);
+						queryOther($conn, $row["id"], $activitytable, $activityfield);
+					}
+				}
+			}
+		}
+		
+		/* Function to query tables that contain multiple entries per user */
+		function queryOther($conn, $currentid, $currenttable, $currentfield){
+			$otherquery = "SELECT $currentfield FROM $currenttable WHERE id='$currentid'";
+			$result = $conn->query($otherquery);
+			echo "Selected $currenttable: ";
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()){
+					echo $row["$currentfield"] . " ";
+				}
+			}
+			echo "</br>";
 		}
 		
 							
