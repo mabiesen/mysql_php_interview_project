@@ -1,6 +1,6 @@
-<html>
+<!DOCTYPE html>
 
-	
+<html>
 	<!-- The form below is sent to new_personality.php -->
 	<!-- From there, the data is sent to three different databases -->
 	
@@ -15,7 +15,7 @@
 
 		<form class="text-center" action="new_personality.php" method="post">
 			
-			<p><p><b>Please select the sports you most enjoy watching on TV (if you don't like sports, select the option that seems most reasonable):</b></p>
+			<p><p><b>Please select the sports you most enjoy watching on TV:</b></p>
 				<input type="checkbox" name="sport[]" value="Football"/>Football
 				<input type="checkbox" name="sport[]" value="Tennis"/>Tennis
 				<input type="checkbox" name="sport[]" value="Baseball"/>Baseball
