@@ -10,9 +10,11 @@ Explicit project criteria is as follows:
 3.) When the user submits the form, the form gets saved using PHP into a MySQL Database.
 
 4.) The test project is to be shared on Github
+
 .
 .
 .
+
 Implicity project criteria is as follows:
 
 1.) Code should be humanly readable
