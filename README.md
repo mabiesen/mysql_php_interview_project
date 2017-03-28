@@ -30,7 +30,25 @@ Project was created and tested on the Raspberry Pi using Apache web server.
 .
 .
 
-## Schemas
+## Directions for use
+
+1. Download and configure PHP, MySQL, and a webs server of your choosing.  This script was tested using Apache.
+
+2. Create a database called "Questions" with three tables: main, sport, and activity. Reference the schemas below for additional information on what fields these tables should contain.
+
+3. Download the script and save to the appropriate folder for your server setup.
+
+4. Before running the script, be sure to change the MySQL password and username variables located in new_personality.php.  If you are not running locally, be sure to change the servername as well.
+
+5. Open index.php with your server of choice.
+
+6. Go ahead and fill out the form.  Upon submit you will be redirected to new_personality.php.  At that time you should be informed whether the script was successful.  As another check, you might use the command line to view table data directly.
+
+.
+.
+.
+
+## Schemas used:
 ```
 Database changed
 mysql> DESCRIBE main;
