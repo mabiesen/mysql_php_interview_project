@@ -36,7 +36,7 @@ Project was created and tested on the Raspberry Pi using Apache web server.
 
 2. In MySQL create a database called "Questions" with three tables: main, sport, and activity. Reference the schemas below for additional information on what fields these tables should contain.
 
-3. Download the script and save to the appropriate folder for your server setup.
+3. Download the script and save to the appropriate folder for your server setup. On Apache this was /var/www/html
 
 4. Before running the script, be sure to change the MySQL password and username variables located in new_personality.php.  If you are not running locally, be sure to change the servername as well.
 
